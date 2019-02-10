@@ -4,12 +4,12 @@ const { Schema } = mongoose
 
 const userSchema = new Schema(
   {
-    username: { type: String, required: true, unique: true, trim: true },
     firstname: { type: String, required: true },
     lastname: { type: String, required: true },
     email: { type: String, required: true, lowercase: true, trim: true },
     mobile: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    secret: { type: String }
   },
   { timestamps: true }
 )
@@ -25,6 +25,11 @@ userSchema.pre('save', async function (next) {
 
   next()
 })
+
+userSchema.methods.matchPasswords = async function (candidatePassword) {
+  let isMatch = await bcrypt.compare(candidatePassword, this.password)
+  return isMatch
+}
 
 const userModel = mongoose.model('User', userSchema)
 
