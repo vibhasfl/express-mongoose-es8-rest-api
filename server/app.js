@@ -14,8 +14,8 @@ app.use(function (req, res, next) {
   return res.status(httpStatus.NOT_FOUND).send('Resource not found')
 })
 
-app.use(errorHandler)
-
 connectMongo()
+
+app.use(errorHandler)
 
 export { app }

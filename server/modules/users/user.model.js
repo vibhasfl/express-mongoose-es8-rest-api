@@ -15,7 +15,6 @@ const userSchema = new Schema(
 )
 
 userSchema.pre('save', async function (next) {
-  console.log('In save')
   let user = this
   // only hash the password if it has been modified (or is new)
   if (!user.isModified('password')) return next()

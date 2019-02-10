@@ -30,7 +30,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "DEBUG=app nodemon --exec babel-node index.js",
     "build": "./node_modules/.bin/babel . --out-dir dist --ignore node_modules",
-    "serve": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "lint": "./node_modules/.bin/eslint 'index.js' 'server/**/*.js' 'server/app.js' "
   },
   "keywords": [],
   "author": "",
