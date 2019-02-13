@@ -1,0 +1,3 @@
+# Mocha options
+./test/integration/user.test.js
+--require babel-core/register
