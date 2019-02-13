@@ -3,11 +3,14 @@ import { Router } from './config/routes'
 import { connectMongo } from './config/mongoconnect'
 import { errorHandler } from './config/errorHandler'
 import bodyParser from 'body-parser'
+import jwt from 'express-jwt'
 import { httpStatus } from './utils/httpStatus'
 import { AppError } from './utils/appError'
+import { secretCallback } from './utils/secretCallback'
 const app = express()
 
 app.use(bodyParser.json())
+app.use(jwt({ secret: secretCallback }).unless({ path: [ '/api/health-check', '/api/users', '/api/auth/login' ], requestProperty: 'auth' }))
 app.use('/api', Router)
 
 // Handle 404

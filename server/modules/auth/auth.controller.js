@@ -24,4 +24,13 @@ auth.login = async (req, res) => {
 
   return res.json({ data: { token, user: exposedUser } })
 }
+
+auth.profile = async (req, res) => {
+  let user = await userModel.findOne({ _id: req.user.sub })
+
+  const { password, __v, secret, ...exposedUser } = user.toObject()
+
+  return res.json({ data: { user: exposedUser } })
+}
+
 export { auth }

@@ -7,5 +7,6 @@ import { login } from './auth.validations'
 const authRoutes = express.Router()
 
 authRoutes.post('/login', validate(login), asyncWrapper(auth.login))
+authRoutes.get('/profile', asyncWrapper(auth.profile))
 
 export { authRoutes }
