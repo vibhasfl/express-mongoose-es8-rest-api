@@ -21,8 +21,9 @@ mongoose.connection.on('close', () => {
   log('Connection Closed')
 })
 
-mongoose.connection.on('error', error => {
+mongoose.connection.on('error', (error) => {
   log('ERROR: ' + error)
+  process.exit(1)
 })
 
 mongoose.set('debug', process.env.MONGO_DEBUG)
