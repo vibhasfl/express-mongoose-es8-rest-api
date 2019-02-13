@@ -8,15 +8,16 @@ Nodejs,Mongoose,ES8,Jwt boilerplate to develop rest api
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 
 ## Features
-- ES8 supported via babel 7.*
+- ES8 supported via [babel](https://github.com/babel/babel) 7.*
 - Authentication via JWT with dynamic secret per user
 - Jwt middleware for authenticated routes management
-- Input validation using Joi
+- Request validation using [joi](https://github.com/hapijs/joi)
 - async-await with single try catch throughout routes using asyncWrapper
-- Code linting using standard and pre commit git hooks using husky
-- Integration test using mocha,chai
-- Auto server start using nodemon
-- uses yarn over npm
+- Code [linting](http://eslint.org) using [standard](https://github.com/standard/standard) and pre commit git hooks using [husky](https://github.com/typicode/husky)
+- Integration test using [mocha](https://github.com/mochajs/mocha),[chai](https://github.com/chaijs/chai),[chai-http](https://github.com/chaijs/chai-http)
+- Auto server start using [nodemon](https://github.com/remy/nodemon)
+- uses [yarn](https://yarnpkg.com) over [npm](https://www.npmjs.com/)
 - Application level errorHandler 
+- Manage enviroment via [dotenv](https://github.com/rolodato/dotenv-safe)
 
 
