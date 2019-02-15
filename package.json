@@ -1,7 +1,7 @@
 {
   "name": "nodejs-mongoose-es7-rest-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A rest api boilerplate using nodejs,mongoose,jwt,es8,joi,nodemon,yarn with testing and code coverage",
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^3.0.4",
@@ -40,7 +40,37 @@
     "precommit": "npm run lint",
     "prepush": "npm run lint"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibhasfl/nodejs-mongoose-es8-rest-api.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "node.js",
+    "mongodb",
+    "mongoose",
+    "es6",
+    "es7",
+    "es8",
+    "es2017",
+    "mocha",
+    "chai",
+    "istanbul",
+    "nyc",
+    "eslint",
+    "standard",
+    "jsonwebtoken",
+    "jwt",
+    "REST",
+    "API",
+    "boilerplate",
+    "starter project template",
+    "babel 7",
+    "nodemon",
+    "integration tests",
+    "joi validation"
+  ],
   "author": "Vibhas Bhingarde",
-  "license": "ISC"
+  "license": "MIT"
 }
