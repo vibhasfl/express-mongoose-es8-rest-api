@@ -6,3 +6,5 @@ if (unusedEnvVars.length) throw new Error('Required ENV variables are not set: [
 const { app } = require('./server/app.js')
 
 app.listen(process.env.PORT)
+
+export default app
