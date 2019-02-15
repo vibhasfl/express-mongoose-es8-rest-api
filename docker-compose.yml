@@ -7,6 +7,8 @@ services:
       - "4000:8081"
     depends_on:
       -  mongodb
+    environment:
+      -  MONGO_HOSTNAME=mongodb
   mongodb:
     container_name: mongodb
     image: mongo
