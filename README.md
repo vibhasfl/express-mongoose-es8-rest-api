@@ -27,8 +27,8 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 ## Getting Started
 1. Clone repository
 ``` 
-git clone https://github.com/vibhasfl/nodejs-mongoose-es8-rest-api.git 
-cd nodejs-mongoose-es8-rest-api
+git clone https://github.com/vibhasfl/express-mongoose-es8-rest-api.git 
+cd express-mongoose-es8-rest-api
 ```
 2. Install yarn 
 ``` 
