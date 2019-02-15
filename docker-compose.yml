@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app:
+    container_name: nodejsmongoosees8restapi
+    build: .
+    ports:
+      - "4000:8081"
+    depends_on:
+      -  mongodb
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27018:27017"
