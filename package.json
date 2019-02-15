@@ -34,7 +34,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run lint && DEBUG=app nodemon --exec babel-node index.js",
-    "build": "npm run lint && ./node_modules/.bin/babel . --out-dir dist --ignore node_modules",
+    "build": "rm -rf dist && npm run lint && ./node_modules/.bin/babel . --out-dir dist --ignore node_modules && cp .env dist",
     "serve": "node dist/index.js",
     "lint": "./node_modules/.bin/eslint 'index.js' 'server/**/*.js' 'server/app.js' ",
     "precommit": "npm run lint",
