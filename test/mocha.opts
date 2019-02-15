@@ -1,3 +1,3 @@
 # Mocha options
-./test/integration/user.test.js
---require babel-core/register
+./test/integration/app.test.js
+--require @babel/register
