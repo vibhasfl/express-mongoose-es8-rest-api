@@ -3,7 +3,7 @@ import { userRoutes } from '../modules/users/user.routes'
 import { authRoutes } from '../modules/auth/auth.routes'
 const Router = express.Router()
 
-Router.get('/health-check', (req, res) => res.send('OK'))
+Router.get('/health-check', (req, res) => res.json({ message: 'OK' }))
 Router.use('/users', userRoutes)
 Router.use('/auth', authRoutes)
 
