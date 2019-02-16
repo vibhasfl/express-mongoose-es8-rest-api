@@ -27,25 +27,33 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 ## Getting Started
 1. Clone repository
 ``` 
-git clone https://github.com/vibhasfl/express-mongoose-es8-rest-api.git 
-cd express-mongoose-es8-rest-api
+> git clone https://github.com/vibhasfl/express-mongoose-es8-rest-api.git 
+> cd express-mongoose-es8-rest-api
 ```
 2. Install yarn 
 ``` 
-npm i -g yarn 
+> npm i -g yarn 
 ```
 3. Install project dependencies
 ```
-yarn
+> yarn
 ```
 4. Set enviroment variables
 ```
-cp .env.sample .env
+> cp .env.sample .env
 ```
 5. Run application
 ``` 
-yarn dev OR npm run dev
+> yarn dev OR npm run dev
 ```
+
+## Running with docker
+```
+> yarn build 
+> docker-compose build
+> docker-compose up
+```
+Note : Make sure [docker](https://hub.docker.com/) is being installed first
 
 
 
