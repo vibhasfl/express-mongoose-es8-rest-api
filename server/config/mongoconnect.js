@@ -26,7 +26,7 @@ mongoose.connection.on('error', (error) => {
   process.exit(1)
 })
 
-mongoose.set('debug', process.env.MONGO_DEBUG)
+if (process.env.APP_ENVIROMENT !== 'test') mongoose.set('debug', process.env.MONGO_DEBUG)
 
 const connectMongo = async () => {
   let connectionuri =

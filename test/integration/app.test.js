@@ -40,6 +40,14 @@ describe('POST /auth/login', () => {
   })
 })
 
+describe('GET /users', () => {
+  it('should return 200', async () => {
+    let response = await chai.request(server).get(`/api/users`).send()
+    expect(response).to.have.status(200)
+    expect(response.body.data.users).to.be.a('array').of.length(1)
+  })
+})
+
 describe('GET /auth/profile', () => {
   it('should return 200', async () => {
     let response = await chai.request(server).get(`/api/auth/profile`).set('Authorization', `Bearer ${token}`).send()
@@ -55,6 +63,20 @@ describe('PUT /users/:id', () => {
     let response = await chai.request(server).put(`/api/users/${sampleuserid}`).set('Authorization', `Bearer ${token}`).send(testuserdata)
     expect(response).to.have.status(200)
     expect(response.body.message).to.be.equal('Record updated')
+  })
+})
+
+describe('GET /auth/login', () => {
+  it('should return 404', async () => {
+    let response = await chai.request(server).get('/api/auth/login').send({})
+    expect(response).to.have.status(404)
+  })
+})
+
+describe('GET /auth/profile', () => {
+  it('should return 401', async () => {
+    let response = await chai.request(server).get(`/api/auth/profile`).send()
+    expect(response).to.have.status(401)
   })
 
   after('Cleaning users collection', async function () {
