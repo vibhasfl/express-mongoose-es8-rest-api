@@ -4,7 +4,7 @@ services:
     container_name: nodejsmongoosees8restapi
     build: .
     ports:
-      - "4000:8081"
+      - "5000:5000"
     depends_on:
       -  mongodb
     environment:

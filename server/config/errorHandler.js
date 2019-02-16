@@ -10,9 +10,9 @@ const log = debug('app')
 const errorHandler = (err, req, res, next) => {
   log(err)
 
-  if (err.name === 'UnauthorizedError') return res.status(httpStatus.UNAUTHORIZED).send({ error: err.message })
-
   if (err instanceof AppError) return res.status(err.status).json({ error: err.message, stack: process.env.APP_ENVIROMENT === 'dev' ? err.stack : '' })
+
+  if (err.name === 'UnauthorizedError') return res.status(httpStatus.UNAUTHORIZED).json({ error: err.message })
 
   return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({ error: process.env.APP_ENVIROMENT === 'dev' ? err.message : 'Oops !! Something went wrong' })
 }
