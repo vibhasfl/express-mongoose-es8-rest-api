@@ -23,6 +23,7 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 - uses [yarn](https://yarnpkg.com) over [npm](https://www.npmjs.com/)
 - Application level errorHandler 
 - Manage enviroment via [dotenv](https://github.com/rolodato/dotenv-safe)
+- Code coverage with [istanbul](https://github.com/istanbuljs/nyc)
 
 ## Getting Started
 1. Clone repository
@@ -46,6 +47,15 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 ``` 
 > yarn dev OR npm run dev
 ```
+6. Run tests
+```
+> yarn test
+```
+7. Generate coverage report
+```
+> yarn test:coverage
+```
+Note : Open coverage/lcov-report/index.html
 
 ## Running with docker
 ```

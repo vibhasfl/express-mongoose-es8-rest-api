@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A rest api boilerplate using nodejs,mongoose,jwt,es8,joi,nodemon,yarn with testing and code coverage",
   "main": "index.js",
+  "private": false,
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
@@ -74,6 +75,6 @@
     "integration tests",
     "joi validation"
   ],
-  "author": "Vibhas Bhingarde",
+  "author": "Vibhas Bhingarde <vibhas.fl@gmail.com>",
   "license": "MIT"
 }
