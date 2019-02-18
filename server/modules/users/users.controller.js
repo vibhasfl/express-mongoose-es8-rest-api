@@ -13,12 +13,6 @@ users.create = async (req, res) => {
   return res.status(httpStatus.CREATED).json({ data: { user } })
 }
 
-users.getUserById = async (req, res) => {
-  let data = await userModel.findOne({ _id: req.params.id }).lean()
-  let { password, __v, ...user } = data
-  return res.json({ data: { user } })
-}
-
 users.update = async (req, res) => {
   let user = await userModel.findById(req.params.id)
   if (!user) return res.status(httpStatus.BAD_REQUEST).json({ message: 'User not found' })
