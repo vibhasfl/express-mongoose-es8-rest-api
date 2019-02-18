@@ -79,7 +79,10 @@ describe('GET /auth/profile', () => {
     expect(response).to.have.status(401)
   })
 
-  after('Cleaning users collection', async function () {
+  it('should return 401 invalid user', async () => {
     await userModel.findOneAndDelete({ _id: sampleuserid })
+    let response = await chai.request(server).get(`/api/auth/profile`).set('Authorization', `Bearer ${token}`).send()
+    expect(response).to.have.status(401)
+    expect(response.body.error).to.be.equal('Invalid user')
   })
 })
