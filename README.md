@@ -24,6 +24,7 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 - Application level errorHandler 
 - Manage enviroment via [dotenv](https://github.com/rolodato/dotenv-safe)
 - Code coverage with [istanbul](https://github.com/istanbuljs/nyc)
+- uses [helmet](https://github.com/helmetjs/helmet) to secure api endpoints which adds necessary security headers
 
 ## Getting Started
 1. Clone repository
