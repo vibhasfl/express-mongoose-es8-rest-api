@@ -8,6 +8,8 @@ import helmet from 'helmet'
 import { httpStatus } from './utils/httpStatus'
 import { AppError } from './utils/appError'
 import { secretCallback } from './utils/secretCallback'
+import { connectMysql } from './config/mysqlconnect'
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -20,7 +22,8 @@ app.use(function (req, res, next) {
   throw new AppError('Resource not found', httpStatus.NOT_FOUND)
 })
 
-connectMongo()
+if (process.env.USE_MONGODB === 'true') connectMongo()
+if (process.env.USE_MYSQL === 'true') connectMysql()
 
 app.use(errorHandler)
 
