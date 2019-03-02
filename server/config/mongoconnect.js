@@ -6,23 +6,23 @@ const log = debug('app')
 mongoose.Promise = Promise
 
 mongoose.connection.on('connected', () => {
-  log('Connection Established')
+  log('MongoDB Connection Established')
 })
 
 mongoose.connection.on('reconnected', () => {
-  log('Connection Reestablished')
+  log('MongoDB Connection Reestablished')
 })
 
 mongoose.connection.on('disconnected', () => {
-  log('Connection Disconnected')
+  log('MongoDB Connection Disconnected')
 })
 
 mongoose.connection.on('close', () => {
-  log('Connection Closed')
+  log('MongoDB Connection Closed')
 })
 
 mongoose.connection.on('error', (error) => {
-  log('ERROR: ' + error)
+  log('MongoDB ERROR: ' + error)
   process.exit(1)
 })
 

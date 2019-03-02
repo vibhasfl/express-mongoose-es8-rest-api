@@ -1,5 +1,6 @@
 import { userModel } from './user.model'
 import { httpStatus } from '../../utils/httpStatus'
+import { pool } from '../../config/mysqlconnect'
 const users = {}
 
 users.index = async (req, res) => {
@@ -21,4 +22,8 @@ users.update = async (req, res) => {
   return res.json({ message: 'Record updated' })
 }
 
+users.testMysql = async (req, res) => {
+  let data = await pool.query('Select * from users')
+  return res.json({ data })
+}
 export { users }

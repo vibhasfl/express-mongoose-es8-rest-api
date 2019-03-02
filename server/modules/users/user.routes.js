@@ -9,5 +9,6 @@ const userRoutes = express.Router()
 userRoutes.get('/', asyncWrapper(users.index))
 userRoutes.post('/', validate(newuser), asyncWrapper(users.create))
 userRoutes.put('/:id', asyncWrapper(users.update))
+userRoutes.get('/testmysqlroute', asyncWrapper(users.testMysql))
 
 export { userRoutes }

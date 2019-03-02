@@ -8,7 +8,7 @@ const log = debug('app')
 // Note : calling next(err) will call this error handler if no other handler id defined.You can handle custom error over here
 
 const errorHandler = (err, req, res, next) => {
-  log(err)
+  log(err.toString())
 
   if (err instanceof AppError) return res.status(err.status).json({ error: err.message, stack: process.env.APP_ENVIROMENT === 'dev' ? err.stack : undefined })
 
