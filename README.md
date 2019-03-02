@@ -1,13 +1,14 @@
 # express-mongoose-es8-rest-api
 
 ## Description
-Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
+Nodejs boilerplate with express,Mongoose,Mysql,ES8,Jwt to develop rest api
 
 [![specification](https://img.shields.io/badge/ES8/ECMASCRIPT-2017-yellow.svg)](https://www.ecma-international.org/ecma-262/8.0/index.html)
 ![node version](https://img.shields.io/badge/node-%3E%3D%208.10.0-brightgreen.svg)
 [![express](https://img.shields.io/badge/express-4.x-orange.svg)](https://github.com/expressjs/express)
 [![mongoose](https://img.shields.io/badge/mongoose-5.4.12-red.svg)](https://mongoosejs.com/)
 [![jsonwebtoken](https://img.shields.io/badge/jsonwebtoken-8.4.0-green.svg)](https://github.com/auth0/node-jsonwebtoken)
+[![mysql](https://img.shields.io/badge/mysql-2.16-blue.svg)](https://github.com/mysqljs/mysql)
 [![code style](https://img.shields.io/badge/eslint--config--standard-%5E12.0.0-blue.svg)](https://github.com/standard/eslint-config-standard)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 
@@ -25,7 +26,7 @@ Nodejs boilerplate with express,Mongoose,ES8,Jwt to develop rest api
 - Manage enviroment via [dotenv](https://github.com/rolodato/dotenv-safe)
 - Code coverage with [istanbul](https://github.com/istanbuljs/nyc)
 - uses [helmet](https://github.com/helmetjs/helmet) to secure api endpoints which adds necessary security headers
-
+- Added support for databases like [mysql](https://github.com/mysqljs/mysql) and [mongoDB](https://github.com/Automattic/mongoose) with async await
 ## Getting Started
 1. Clone repository
 ``` 
