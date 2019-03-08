@@ -7,4 +7,4 @@ COPY package*.json /app
 RUN yarn
 COPY ./dist/. /app
 CMD DEBUG=app node index.js
-EXPOSE 8081
+EXPOSE 5000
