@@ -1,7 +1,7 @@
 # express-mongoose-es8-rest-api
 
 ## Description
-Nodejs boilerplate with express,Mongoose,Mysql,ES8,Jwt to develop rest api
+Nodejs boilerplate with express,Mongoose,Mysql,JWT,ES6,ES7,ES8 support to develop REST api
 
 [![specification](https://img.shields.io/badge/ES8/ECMASCRIPT-2017-yellow.svg)](https://www.ecma-international.org/ecma-262/8.0/index.html)
 ![node version](https://img.shields.io/badge/node-%3E%3D%208.10.0-brightgreen.svg)
@@ -13,7 +13,7 @@ Nodejs boilerplate with express,Mongoose,Mysql,ES8,Jwt to develop rest api
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 
 ## Features
-- ES8 supported via [babel](https://github.com/babel/babel) 7.*
+- ES6,ES7,ES8 supported via [babel](https://github.com/babel/babel) 7.*
 - Authentication via JWT with dynamic secret per user
 - Jwt middleware for authenticated routes management
 - Request validation using [joi](https://github.com/hapijs/joi)
