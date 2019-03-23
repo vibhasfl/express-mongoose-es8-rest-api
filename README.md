@@ -26,7 +26,9 @@ Nodejs boilerplate with express,Mongoose,Mysql,JWT,ES6,ES7,ES8 support to develo
 - Manage enviroment via [dotenv](https://github.com/rolodato/dotenv-safe)
 - Code coverage with [istanbul](https://github.com/istanbuljs/nyc)
 - uses [helmet](https://github.com/helmetjs/helmet) to secure api endpoints which adds necessary security headers
-- Added support for databases like [mysql](https://github.com/mysqljs/mysql) and [mongoDB](https://github.com/Automattic/mongoose) with async await
+- Added support for databases like [mysql](https://github.com/mysqljs/mysql) and [mongoDB](https://github.com/Automattic/mongoose) with 
+async await
+- Fileupload using [multer](https://github.com/expressjs/multer)
 ## Getting Started
 1. Clone repository
 ``` 

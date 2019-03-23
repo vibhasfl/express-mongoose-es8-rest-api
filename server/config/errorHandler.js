@@ -1,6 +1,5 @@
 import { httpStatus } from '../utils/httpStatus'
 import debug from 'debug'
-import { AppError } from '../utils/appError'
 
 const log = debug('app')
 
@@ -10,7 +9,7 @@ const log = debug('app')
 const errorHandler = (err, req, res, next) => {
   log(err.toString())
 
-  if (err instanceof AppError) return res.status(err.status).json({ error: err.message, stack: process.env.APP_ENVIROMENT === 'dev' ? err.stack : undefined })
+  if (err.name === 'AppError') return res.status(err.status).json({ error: err.message, stack: process.env.APP_ENVIROMENT === 'dev' ? err.stack : undefined })
 
   if (err.name === 'UnauthorizedError') return res.status(httpStatus.UNAUTHORIZED).json({ error: err.message })
 
