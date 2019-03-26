@@ -6,8 +6,8 @@ let applicationEnvVars = [ 'APP_ENVIROMENT', 'PORT', 'USE_MONGODB', 'USE_MYSQL' 
 let mysqlEnvVars = [ 'MYSQL_HOSTNAME', 'MYSQL_PORT', 'MYSQL_USERNAME', 'MYSQL_DATABASE', 'MYSQL_PASSWORD' ]
 let mongoEnvVars = [ 'MONGO_HOSTNAME', 'MONGO_PORT', 'MONGO_DATABASE' ]
 
-if (process.env.USE_MONGODB) applicationEnvVars = [ ...applicationEnvVars, ...mongoEnvVars ]
-if (process.env.USE_MYSQL) applicationEnvVars = [ ...applicationEnvVars, ...mysqlEnvVars ]
+if (process.env.USE_MONGODB === 'true') applicationEnvVars = [ ...applicationEnvVars, ...mongoEnvVars ]
+if (process.env.USE_MYSQL === 'true') applicationEnvVars = [ ...applicationEnvVars, ...mysqlEnvVars ]
 
 let unusedEnvVars = applicationEnvVars.filter((i) => !process.env[i])
 
