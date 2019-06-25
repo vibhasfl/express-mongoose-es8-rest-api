@@ -28,7 +28,7 @@ Nodejs boilerplate with express,Mongoose,Mysql,JWT,ES6,ES7,ES8 support to develo
 - uses [helmet](https://github.com/helmetjs/helmet) to secure api endpoints which adds necessary security headers
 - Added support for databases like [mysql](https://github.com/mysqljs/mysql) and [mongoDB](https://github.com/Automattic/mongoose) with 
 async await
-- Fileupload using [multer](https://github.com/expressjs/multer)
+- Flexible fileupload with disk and S3 storage using [multer](https://github.com/expressjs/multer) and [multer-s3](https://github.com/badunk/multer-s3)
 ## Getting Started
 1. Clone repository
 ``` 
